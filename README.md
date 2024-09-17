@@ -73,11 +73,3 @@ Bu proje, API isteklerini, WebSocket bağlantılarını, asenkron işlemleri ve 
 
 - Yanıtı dosyaya kaydederken kullanılan formatlar: JSON, XML, CSV, YAML
 - Yanıt veritabanına kaydedildiğinde, SQLite kullanılır. Veritabanı dosyası `api_responses.db` olarak adlandırılır ve yanıtlar `responses` tablosuna kaydedilir.
-
-## Katkıda Bulunma
-
-Katkıda bulunmak isterseniz, lütfen pull request göndermekten çekinmeyin. Her türlü geri bildirim ve öneriye açığız.
-
-## Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakabilirsiniz.
