@@ -18,7 +18,7 @@ Bu proje, API isteklerini, WebSocket bağlantılarını, asenkron işlemleri ve 
 
 ## Kurulum
 
-1. Bu depo klonlayın:
+1. Bu depoyu klonlayın:
     ```bash
     git clone https://github.com/bursow/APIcat
     ```
