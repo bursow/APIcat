@@ -1,11 +1,46 @@
+
+
+
 import argparse
 import asyncio
 import logging
 from core import async_request_handler, websocket_handler, init_db, save_response_to_file, process_response, schedule_requests, setup_logging, save_response_to_db
 import pandas as pd
 
+"""
+API key kullanımı için doğru kullanım:
+
+    python3 main.py --url "http://example/example" --async_  --api-key tHs6A8AuYlrLxUhOnnvw8giJDQodEjBH --save-file --db-save
+
+Standart Request kullanımı:
+
+    python3 main.py --url "https://example/exampla" --method get --save-file --format json 
+
+"""
+
+
+ascii_art = r"""
+
+
+                     /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\ 
+                    ( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )
+                    > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ < 
+                     /\_/\       _    ____ ___          _      /\_/\ 
+                    ( o.o )     / \  |  _ \_ _|___ __ _| |_   ( o.o )
+                    > ^ <     / _ \ | |_) | |/ __/ _` | __|   > ^ < 
+                     /\_/\    / ___ \|  __/| | (_| (_| | |_    /\_/\ 
+                    ( o.o )  /_/   \_\_|  |___\___\__,_|\__|  ( o.o )
+                    > ^ <                                     > ^ < 
+                     /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\  /\_/\ 
+                    ( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )( o.o )
+                    > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ <  > ^ < 
+
+"""
+
+print(ascii_art)
+
 def parse_arguments():
-    parser = argparse.ArgumentParser(description="Gelişmiş API istemcisi")
+    parser = argparse.ArgumentParser(description="APIcat")
     parser.add_argument('--url', required=True, help="API URL veya WebSocket URI")
     parser.add_argument('--method', default="get", choices=["get", "post", "put", "delete"], help="HTTP yöntemi")
     parser.add_argument('--save-file', action="store_true", help="Yanıtı dosyaya kaydet")

@@ -1,6 +1,13 @@
+
+
 import sqlite3
 from datetime import datetime
 
+
+"""
+Standart Database ismi aşağıdaki fonksiyonda yer almaktadır. Kaydedilecek veritabanın isimi buradan değiştirilebilir.
+
+"""
 
 def init_db(db_name="api_responses.db"):
     conn = sqlite3.connect(db_name)

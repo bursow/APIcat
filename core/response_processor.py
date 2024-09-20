@@ -15,7 +15,7 @@ def process_response(response_text, content_type):
     elif 'application/xml' in content_type or 'text/xml' in content_type:
         logging.info("Yanıt XML formatında.")
         try:
-            # Wrap the XML string in a StringIO object
+            # Pandas artık StringIO ile çalışıyor
             xml_data = StringIO(response_text)
             df = pd.read_xml(xml_data)
             return df
